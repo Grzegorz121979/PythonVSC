@@ -21,7 +21,7 @@ def cod_string(text, char_list, k):
     for letter in text:
         index = char_list.index(letter)
         c_text += k[index]
-    return cipher_text
+    return c_text
 
 print(f"The coded text is: {cod_string(plain_text, chars, key)}")
 
@@ -37,6 +37,6 @@ def decod_string(text, char_list, k):
     for letter in text:
         index = k.index(letter)
         p_text += char_list[index]
-    return plain_text
+    return p_text
 
 print(f"The decoded text is: {decod_string(cipher_text, chars, key)}")
