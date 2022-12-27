@@ -9,7 +9,7 @@ plain_text = input("Enter a message: ")
 
 def cod_string(text):
     '''
-    funcion to coding string
+    function to coding string
     '''
     chars = " " + string.ascii_letters + string.punctuation + string.digits
     chars = list(chars)
