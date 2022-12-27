@@ -1,44 +1,11 @@
-sentence = "Hello World"
-key = int(input("Enter a key: "))
+import random
+import string
 
-def code_string(s, k):
-    numbers = []
-    letters = []
-    code_s = ""
-    
-    for letter in s:
-        numbers.append(ord(letter) + k)
-        
-    for number in numbers:
-        letters.append(chr(number))
-        
-    i = 0
-    
-    while i < len(letters):
-        code_s += letters[i]
-        i += 1
-    
-    return code_s
+chars = string.ascii_letters + string.punctuation + string.digits
+chars = list(chars)
+key = chars.copy()
 
+random.shuffle(key)
 
-def decode_string(s, k):
-    numbers = []
-    letters = []
-    code_s = ""
-    
-    for letter in s:
-        numbers.append(ord(letter) - k)
-        
-    for number in numbers:
-        letters.append(chr(number))
-        
-    i = 0
-    
-    while i < len(letters):
-        code_s += letters[i]
-        i += 1
-    
-    return code_s
-
-print(code_string(sentence, key))
-print(decode_string(code_string(sentence, key), key))
+print(chars)
+print(key)
