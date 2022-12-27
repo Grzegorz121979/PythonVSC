@@ -4,24 +4,23 @@ exercise coding string
 import random
 import string
 
-chars = " " + string.ascii_letters + string.punctuation + string.digits
-chars = list(chars)
+CHARS = " " + string.ascii_letters + string.punctuation + string.digits
+chars = list(CHARS)
 key = chars.copy()
 random.shuffle(key)
 
 plain_text = input("Enter a message: ")
 
 
-def cod_string(text, ch, k):
+def cod_string(text, char_list, k):
     '''
     function to coding string
     '''
-    cipher_text = ""
+    c_text = ""
 
     for letter in text:
-        index = ch.index(letter)
-        cipher_text += k[index]
-    
+        index = char_list.index(letter)
+        c_text += k[index]
     return cipher_text
 
 print(f"The coded text is: {cod_string(plain_text, chars, key)}")
@@ -29,16 +28,15 @@ print(f"The coded text is: {cod_string(plain_text, chars, key)}")
 cipher_text = input("Enter a message: ")
 
 
-def decod_string(text, ch, k):
+def decod_string(text, char_list, k):
     '''
     function to decoding string
     '''
-    plain_text = ""
+    p_text = ""
 
-    for letter in cipher_text:
+    for letter in text:
         index = k.index(letter)
-        plain_text += ch[index]
-    
+        p_text += char_list[index]
     return plain_text
 
 print(f"The decoded text is: {decod_string(cipher_text, chars, key)}")
