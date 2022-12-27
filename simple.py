@@ -1,6 +1,6 @@
-'''
-exercise coding string
-'''
+"""
+coding and decoding string exercise
+"""
 import random
 import string
 
@@ -13,9 +13,9 @@ plain_text = input("Enter a message: ")
 
 
 def cod_string(text, char_list, k):
-    '''
-    function to coding string
-    '''
+    """
+    coding string
+    """
     c_text = ""
 
     for letter in text:
@@ -29,9 +29,9 @@ cipher_text = input("Enter a message: ")
 
 
 def decod_string(text, char_list, k):
-    '''
-    function to decoding string
-    '''
+    """
+    decoding string
+    """
     p_text = ""
 
     for letter in text:
