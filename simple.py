@@ -25,5 +25,4 @@ def cod_string(text):
     return cipher_text
 
 print(f"The orgilan text is: {plain_text}")
-coding_string = cod_string(plain_text)
-print(f"The coded text is: {coding_string}")
+print(f"The coded text is: {cod_string(plain_text)}")
